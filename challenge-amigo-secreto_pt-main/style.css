@@ -1,0 +1,213 @@
+:root {
+    --color-primary: #ffffff;
+    --color-secondary: #d7f1f3;
+    --color-tertiary: #4db9b4;
+    --color-button: #4db9b4;
+    --color-button-hover: #ec2d2d;
+    --color-text: #030303;
+    --color-white: #ffffff;
+}
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+   
+}
+
+/* Banner */
+.header-banner {
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.header-banner::before {
+    content: "";
+    position: absolute;
+    top: 20;
+    left: 20;
+    width: 100%;
+    height: 100%;
+    background: url('assets/amigo-secreto.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Seção de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    position: absolute;
+    top: 10%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.section-title {
+    font-family: "Inter", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-shadow: 3px 5px 10px rgb(0, 0, 0);
+    text-align: center;
+}
+
+/* Contêineres de entrada e botão */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+}
+
+.button-container {
+    width: 300px;
+    justify-content: center;
+    text-shadow: 3px 5px 10px rgb(0, 0, 0);
+}
+
+/* Estilos de botão */
+button {
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    text-shadow: 3px 5px 10px rgb(0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-white);
+    border-radius: 0 25px 25px 0;
+    text-shadow: 3px 5px 10px rgb(0, 0, 0);
+}
+
+.button-add:hover {
+    background-color: #e21e11;
+    text-shadow: 3px 5px 10px rgb(0, 0, 0);
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+    text-shadow: 3px 5px 6px rgb(219, 212, 212);
+}
+
+.result-list {
+    margin-top: 15px;
+    color: #4CAF50;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botão de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    
+    font-size: 16px;
+}
+
+.button-draw img {
+    margin-right: 40px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* Estilos de erro */
+#error-list-empty {
+    color: #e74242;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+.error {
+    border: 1px solid red;
+}
+
+#error-message {
+    color: red;  /* Certifique-se de que o texto da mensagem de erro seja vermelho */
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;  /* Deixe o texto mais visível */
+}
+
+/* Estilo para o amigo sorteado */
+#resultado li {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3ebd42;
+}
+
+#resultado li span {
+    color: #3ebd42;  /* Verde para o nome do amigo sorteado */
+    font-weight: normal;
+}
